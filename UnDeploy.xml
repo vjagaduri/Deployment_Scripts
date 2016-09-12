@@ -3,15 +3,15 @@
 
   <!-- Weblogic AdminServer connection details -->
    <connection> 
-    <prop name="admin-user" value="admin"  />
-    <prop name="admin-password" value="polaris123" />
-    <prop name="admin-host" value="10.10.7.9"  />
-    <prop name="admin-port" value="9757"  />
+    <prop name="admin-user" value=$WLUSER  />
+    <prop name="admin-password" value=$WLUSERPASS />
+    <prop name="admin-host" value=$HOSTNAME  />
+    <prop name="admin-port" value="7001"  />
   </connection>
   
-  <res name="IPSH.ear" type="Undeploy">
-    <prop name="appName" value="IPSH" />
-    <prop name="earpath" value="/usr1/SIR09757/GTB_HOME/IPSH_HOME/EAR/IPSH.ear" />
-    <prop name="target" value="AdminServer" type="Servers" />	
+  <res name=$WLAPP type="UnDeploy">
+    <prop name="appName" value=$WLAPPNAME />
+    <prop name="earpath" value=$WLEARPATH />
+    <prop name="target" value=$WLSERVER type="Servers" />
   </res>
 </config>
