@@ -29,17 +29,17 @@ from java.io import *
 
 # Utility function to validate commandline argument
 def validateArg():
-#  if len( sys.argv ) == 2:
-#    configXmlFile = sys.argv[1]
-#    # Validate config XML file
-#    if not os.path.exists( configXmlFile ):
-#      sys.exit( 'ERROR: Config xml file %s was not found!' % configXmlFile )
-#  elif len( sys.argv ) == 3:
-#    print "=== Validating Weblogic Resources ==="
-#  else:
-#    print "Usage 1: CdocmWlConfig.py" + " <Config XML File> - To Create/Update weblogic resource"
-#    print "Usage 2: CdocmWlConfig.py" + " <Config XML File> -validate - To Validate the existence of weblogic resources"
-#    sys.exit( -1 )
+  if len( sys.argv ) == 2:
+    configXmlFile = sys.argv[1]
+    # Validate config XML file
+    if not os.path.exists( configXmlFile ):
+      sys.exit( 'ERROR: Config xml file %s was not found!' % configXmlFile )
+  elif len( sys.argv ) == 3:
+    print "=== Validating Weblogic Resources ==="
+  else:
+    print "Usage 1: CdocmWlConfig.py" + " <Config XML File> - To Create/Update weblogic resource"
+    print "Usage 2: CdocmWlConfig.py" + " <Config XML File> -validate - To Validate the existence of weblogic resources"
+    sys.exit( -1 )
 
 def p( varName, varValue ):
     print "varName: " + str(varValue)
