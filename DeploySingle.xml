@@ -1,19 +1,21 @@
 <?xml version="1.0"?>
 <config version="1.0.0.0">
 
+<property file="build.properties" />
+
   <!-- Weblogic AdminServer connection details -->
   <connection> 
-    <prop name="admin-user" value=$WLUSER  />
-    <prop name="admin-password" value=$WLUSERPASS />
-    <prop name="admin-host" value=$HOSTNAME  />
+    <prop name="admin-user" value="${WLUSER}"  />
+    <prop name="admin-password" value="${WLUSERPASS}" />
+    <prop name="admin-host" value="${HOSTNAME}"  />
     <prop name="admin-port" value="7001"  />
   </connection>
     
 	
-     <res name=$WLAPP type="Deploy">
-    <prop name="appName" value=$WLAPPNAME />
-    <prop name="earpath" value=$WLEARPATH />
-    <prop name="target" value=$WLSERVER type="Servers" />
+     <res name="${WLAPP}" type="Deploy">
+    <prop name="appName" value="${WLAPPNAME}" />
+    <prop name="earpath" value="${WLEARPATH}" />
+    <prop name="target" value="${WLSERVER}" type="Servers" />
   </res>
   <!--
   <res name="pshintegrator1Axis2_31JAN16.ear" type="Deploy">

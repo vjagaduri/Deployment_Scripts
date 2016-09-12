@@ -3,17 +3,17 @@
 
   <!-- Weblogic AdminServer connection details -->
   <connection> 
-    <prop name="admin-user" value="admin"  />
-    <prop name="admin-password" value="polaris123" />
-    <prop name="admin-host" value="10.10.7.82"  />
-    <prop name="admin-port" value="20026"  />
+    <prop name="admin-user" value=$WLUSER  />
+    <prop name="admin-password" value=$WLUSERPASS />
+    <prop name="admin-host" value=$HOSTNAME  />
+    <prop name="admin-port" value="7001"  />
   </connection>
     
 	
-     <res name="IPSH20160705.ear" type="Deploy">
-    <prop name="appName" value="IPSH" />
-    <prop name="earpath" value="/usr1/SIR12383/GTB_HOME/IPSH_HOME/EAR/IPSH20160705.ear" />
-    <prop name="target" value="AdminServer" type="Servers" />
+     <res name=$WLAPP type="Deploy">
+    <prop name="appName" value=$WLAPPNAME />
+    <prop name="earpath" value=$WLEARPATH />
+    <prop name="target" value=$WLSERVER type="Servers" />
   </res>
   <!--
   <res name="pshintegrator1Axis2_31JAN16.ear" type="Deploy">
