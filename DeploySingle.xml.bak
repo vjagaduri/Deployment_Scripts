@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config version="1.0.0.0">
+
+  <!-- Weblogic AdminServer connection details -->
+  <connection> 
+    <prop name="admin-user" value="admin"  />
+    <prop name="admin-password" value="polaris123" />
+    <prop name="admin-host" value="10.10.7.82"  />
+    <prop name="admin-port" value="20026"  />
+  </connection>
+    
+	
+     <res name="IPSH20160705.ear" type="Deploy">
+    <prop name="appName" value="IPSH" />
+    <prop name="earpath" value="/usr1/SIR12383/GTB_HOME/IPSH_HOME/EAR/IPSH20160705.ear" />
+    <prop name="target" value="AdminServer" type="Servers" />
+  </res>
+  <!--
+  <res name="pshintegrator1Axis2_31JAN16.ear" type="Deploy">
+    <prop name="appName" value="pshintegrator1Axis2" />
+    <prop name="earpath" value="/usr1/SIR12365/GTB_HOME/IPSH_HOME/EAR/pshintegrator1Axis2_31JAN16.ear" />
+    <prop name="target" value="AdminServer" type="Servers" />
+  </res>
+
+  <res name="pshintegratorApr13.ear" type="Deploy">
+    <prop name="appName" value="pshintegrator" />
+    <prop name="earpath" value="/usr1/SIR12365/GTB_HOME/IPSH_HOME/EAR/pshintegratorApr13.ear" />
+    <prop name="target" value="AdminServer" type="Servers" />
+  </res>
+  -->
+</config>
