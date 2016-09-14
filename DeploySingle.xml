@@ -14,7 +14,7 @@
 	
     <res name="AntExample.war" type="Deploy">
     <prop name="appName" value="Ant EXample" />
-    <prop name="earpath" value="/usr1/git-repo/AntExample1/dist" />
+    <prop name="earpath" value="/usr1/git-repo/AntExample1/dist/AntExample.war" />
     <prop name="target" value="examplesServer" type="Servers" />
   </res>
   <!--
