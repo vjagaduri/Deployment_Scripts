@@ -2,16 +2,18 @@
 <config version="1.0.0.0">
 
   <!-- Weblogic AdminServer connection details -->
-   <connection> 
-    <prop name="admin-user" value=$WLUSER  />
-    <prop name="admin-password" value=$WLUSERPASS />
-    <prop name="admin-host" value=$HOSTNAME  />
+  <connection> 
+    <prop name="admin-user" value="${WLUSER}"  />
+    <prop name="admin-password" value="${WLUSERPASS}" />
+    <prop name="admin-host" value="${WLHOSTNAME}"  />
     <prop name="admin-port" value="7001"  />
   </connection>
-  
-  <res name=$WLAPP type="UnDeploy">
-    <prop name="appName" value=$WLAPPNAME />
-    <prop name="earpath" value=$WLEARPATH />
-    <prop name="target" value=$WLSERVER type="Servers" />
+    
+	
+  <res name="${WLAPP}" type="Undeploy">
+    <prop name="appName" value="${WLAPPNAME}" />
+    <prop name="earpath" value="${WLEARPATH}" />
+    <prop name="target" value="${WLSERVER}" type="Servers" />
   </res>
+
 </config>

@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <config version="1.0.0.0">
 
-<property file="build.properties" />
-
   <!-- Weblogic AdminServer connection details -->
   <connection> 
     <prop name="admin-user" value="${WLUSER}"  />
@@ -12,7 +10,7 @@
   </connection>
     
 	
-     <res name="${WLAPP}" type="Deploy">
+  <res name="${WLAPP}" type="Deploy">
     <prop name="appName" value="${WLAPPNAME}" />
     <prop name="earpath" value="${WLEARPATH}" />
     <prop name="target" value="${WLSERVER}" type="Servers" />

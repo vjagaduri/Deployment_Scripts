@@ -5,17 +5,17 @@
 
   <!-- Weblogic AdminServer connection details -->
   <connection> 
-    <prop name="admin-user" value="weblogic"  />
-    <prop name="admin-password" value="welcome1" />
-    <prop name="admin-host" value="ec2-54-175-78-112.compute-1.amazonaws.com"  />
+    <prop name="admin-user" value="${WLUSER}"  />
+    <prop name="admin-password" value="${WLUSERPASS}" />
+    <prop name="admin-host" value="${WLHOSTNAME}"  />
     <prop name="admin-port" value="7001"  />
   </connection>
     
 	
-    <res name="AntExample.war" type="Deploy">
-    <prop name="appName" value="Ant EXample" />
-    <prop name="earpath" value="/usr1/git-repo/AntExample1/dist/AntExample.war" />
-    <prop name="target" value="examplesServer" type="Servers" />
+     <res name="${WLAPP}" type="Deploy">
+    <prop name="appName" value="${WLAPPNAME}" />
+    <prop name="earpath" value="${WLEARPATH}" />
+    <prop name="target" value="${WLSERVER}" type="Servers" />
   </res>
   <!--
   <res name="pshintegrator1Axis2_31JAN16.ear" type="Deploy">
