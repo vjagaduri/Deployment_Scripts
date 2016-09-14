@@ -7,7 +7,7 @@
   <connection> 
     <prop name="admin-user" value="${WLUSER}"  />
     <prop name="admin-password" value="${WLUSERPASS}" />
-    <prop name="admin-host" value="${HOSTNAME}"  />
+    <prop name="admin-host" value="${WLHOSTNAME}"  />
     <prop name="admin-port" value="7001"  />
   </connection>
     
